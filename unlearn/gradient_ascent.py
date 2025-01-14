@@ -63,7 +63,7 @@ class GradAscent(UnlearnMethod):
                 outputs = self.model(images)
                 loss = -1 * self.loss_function(outputs, labels)
                 loss.backward()
-                torch.nn.utils.clip_grad_norm(self.model.parameters(), max_norm=self.max_norm)
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=self.max_norm)
                 optimizer.step()
 
                 acc1 = utils.accuracy(outputs.data, labels)[0]
