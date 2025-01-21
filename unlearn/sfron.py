@@ -108,7 +108,7 @@ class SFRon(UnlearnMethod):
         self.unlearn_loss = "adaga"
         self.forget_freq = 5
 
-        self.forget_alpha = 25 
+        self.forget_alpha = 0.25
         self.max_norm = 7.0
 
         self.ema_enabled = True

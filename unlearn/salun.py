@@ -87,6 +87,8 @@ class SalUn(UnlearnMethod):
             scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
                 optimizer, T_max=self.epochs
             )
+        
+        self.counter = 0
 
         for epoch in range(1, self.epochs + 1):
             # train on retain train and forget train with random label

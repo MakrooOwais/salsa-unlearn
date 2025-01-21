@@ -47,24 +47,7 @@ class SCRUB(UnlearnMethod):
         self.eval = False
         # params
         # TinyImageNet
-        self.opt = 'adamw'
-        self.gamma = 0.99
-        self.alpha = 0.001
-        self.beta = 0
-        self.smoothing = 0.0
-        self.msteps = 2
-        self.clip = 0.2
-        self.sstart = 10
-        self.kd_T = 4
-        self.distill = 'kd'
-        self.sched = 'cosine'
-        self.sgda_epochs = 1
-        self.sgda_learning_rate = 1e-4
-        self.sgda_weight_decay = 0.05
-        self.sgda_momentum = 0.9
-        self.print_freq = 100
-        # CIFAR10 
-        # self.opt = 'sgd'
+        # self.opt = 'adamw'
         # self.gamma = 0.99
         # self.alpha = 0.001
         # self.beta = 0
@@ -75,11 +58,28 @@ class SCRUB(UnlearnMethod):
         # self.kd_T = 4
         # self.distill = 'kd'
         # self.sched = 'cosine'
-        # self.sgda_epochs = 6
-        # self.sgda_learning_rate = 0.00008
-        # self.sgda_weight_decay = 5e-4
+        # self.sgda_epochs = 1
+        # self.sgda_learning_rate = 1e-4
+        # self.sgda_weight_decay = 0.05
         # self.sgda_momentum = 0.9
         # self.print_freq = 100
+        # CIFAR10 
+        self.opt = 'sgd'
+        self.gamma = 0.99
+        self.alpha = 0.001
+        self.beta = 0
+        self.smoothing = 0.0
+        self.msteps = 2
+        self.clip = 0.2
+        self.sstart = 10
+        self.kd_T = 4
+        self.distill = 'kd'
+        self.sched = 'cosine'
+        self.sgda_epochs = 6
+        self.sgda_learning_rate = 0.00008
+        self.sgda_weight_decay = 5e-4
+        self.sgda_momentum = 0.9
+        self.print_freq = 100
 
     
     def prepare_unlearn(self, unlearn_dataloaders: dict) -> None:
