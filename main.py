@@ -98,10 +98,10 @@ def main(
     unlearn_model = unlearn_method.get_unlearned_model()
     end_time = time.time()
     print("Num steps:", model.counter)
-    
+
     time_elapsed = end_time - start_time
     torch.save(unlearn_model.state_dict(), os.path.join(save_path, "unlearn_model.pt"))
-    
+
     evaluation_results = {"method": unlearn_name, "seed": seed, "steps": model.counter}
     for name, loader in unlearn_dataloaders.items():
         if loader is None:
@@ -112,16 +112,23 @@ def main(
             evaluation_results[f"{name}_{metr}"] = v
 
     attacker = Attacker(model, trainloader, forget_trainloader, testloader)
-    evaluation_results['asr'] = attacker.attack()
-    evaluation_results['iter'] = model.counter
+    evaluation_results["asr"] = attacker.attack()
+    evaluation_results["iter"] = model.counter
 
     with open(os.path.join(save_path, f"results.json"), "w") as f:
         json.dump(evaluation_results, f, indent=4)
 
 
 if __name__ == "__main__":
-    #"SFRon", "BadTeacher", 
-    for method in ["GradAscent", "RandomLabel", "SCRUB", "SalUn", "Finetune"]:
+    for method in [
+        "SFRon",
+        "BadTeacher",
+        "GradAscent",
+        "RandomLabel",
+        "SCRUB",
+        "SalUn",
+        "Finetune",
+    ]:
         if method == "GradAscent":
             batch_size = 256
         elif method == "SalUn" or method == "SFRon":
