@@ -1,5 +1,5 @@
 # Machine Unlearing
-This is a official repository for Machine Unlearning in Classification.
+This is a repository for Machine Unlearning in Classification.
 
 ## Requirements
 ```
