@@ -1,5 +1,5 @@
-# **S**aliency **F**orgetting in the **R**emain-preserving manifold **on**line for **Classification**
-This is the official repository for SFR-on on Classification.
+# Machine Unlearing
+This is a official repository for Machine Unlearning in Classification.
 
 ## Requirements
 ```
