@@ -9,9 +9,9 @@ import torch.nn as nn
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod, UnLearnDataset
-from trainer import validate
+from unlearn_lib.trainer import validate
 
 
 class RandomLabel(UnlearnMethod):

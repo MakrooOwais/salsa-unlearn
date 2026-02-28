@@ -1,7 +1,7 @@
 import time 
 from collections import OrderedDict
 import torch 
-import utils
+from unlearn_lib from unlearn_lib import utils
 
 
 def train(epoch, loader, model, loss_function, optimizer, scheduler=None, log_freq=10000):

@@ -12,12 +12,12 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-import utils
-from models import create_model
-from dataset import create_dataset, dataset_convert_to_valid
-import unlearn 
-from trainer import validate
-from evaluation import get_membership_attack_prob, get_js_divergence, get_SVC_MIA
+from unlearn_lib import utils
+from unlearn_lib.models import create_model
+from unlearn_lib.dataset import create_dataset, dataset_convert_to_valid
+from unlearn_lib import unlearn 
+from unlearn_lib.trainer import validate
+from unlearn_lib.evaluation import get_membership_attack_prob, get_js_divergence, get_SVC_MIA
 
 
 def main():

@@ -5,10 +5,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod
-from models import create_model
-from trainer import train, validate
+from unlearn_lib.models import create_model
+from unlearn_lib.trainer import train, validate
 
 
 class Retrain(UnlearnMethod):

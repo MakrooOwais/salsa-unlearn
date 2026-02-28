@@ -9,9 +9,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod
-from trainer import train, validate
+from unlearn_lib.trainer import train, validate
 
 
 class DistillKL(nn.Module):

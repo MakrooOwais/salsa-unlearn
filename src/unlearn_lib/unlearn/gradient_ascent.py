@@ -6,9 +6,9 @@ import torch
 import torch.nn as nn
 from torch.optim.lr_scheduler import LambdaLR
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod
-from trainer import train, validate
+from unlearn_lib.trainer import train, validate
 
 
 def linear_schedule(current_step, total_steps):

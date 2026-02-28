@@ -8,10 +8,10 @@ import torch.nn as nn
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod, UnLearnDataset
-from models import create_model
-from trainer import train, validate
+from unlearn_lib.models import create_model
+from unlearn_lib.trainer import train, validate
 
 
 def DistillLoss(

@@ -1,7 +1,7 @@
 import time 
 from collections import OrderedDict
 import torch 
-import utils
+from unlearn_lib from unlearn_lib import utils
 
 
 @torch.no_grad()

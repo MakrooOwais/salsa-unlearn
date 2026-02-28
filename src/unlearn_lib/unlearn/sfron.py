@@ -6,9 +6,9 @@ import time
 import torch 
 import torch.nn as nn
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod
-from trainer import validate
+from unlearn_lib.trainer import validate
 
 
 def cycle(dl):

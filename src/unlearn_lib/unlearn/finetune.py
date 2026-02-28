@@ -4,9 +4,9 @@ from datetime import datetime
 import torch 
 import torch.nn as nn
 
-import utils
+from unlearn_lib from unlearn_lib import utils
 from .unlearn_method import UnlearnMethod
-from trainer import train, validate
+from unlearn_lib.trainer import train, validate
 
 
 class Finetune(UnlearnMethod):
